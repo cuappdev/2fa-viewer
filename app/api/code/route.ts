@@ -62,7 +62,7 @@ export async function POST(request: Request) {
     // Search for recent Google Voice forwarded SMS — adjust query if needed
     const listRes = await gmail.users.messages.list({
       userId: 'me',
-      q: 'from:txt.voice.google.com',
+      q: 'from:noreply@google.com subject:"Google Verification Code"',
       maxResults: 1,
     });
 
